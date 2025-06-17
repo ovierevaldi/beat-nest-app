@@ -1,28 +1,41 @@
+import { PlatformDataList, PlatformType } from "@/musicData";
 import Image, { StaticImageData } from "next/image";
 
 type PlatformButtonProp = {
-  image: StaticImageData;
-  title: string;
-  altTitle?: string;
+  type: PlatformType;
+  background?: string;
+  color?: string;
+};
+
+type PlatformData = {
+  title: string
+  altTitle: string
+  image: StaticImageData
 }
 
-const PlatformButton = ({ image, title, altTitle } : PlatformButtonProp) => {
-    const platformSvcWidth = 55;
-    const platformSvcHeight = 55;
+const PlatformButton = ({ type, background, color } : PlatformButtonProp) => {
+  const platformSvcWidth = 55;
+  const platformSvcHeight = 55;
+
+  const getSelectedData = (type: PlatformType): PlatformData => {
+      return PlatformDataList.find(p => p.type === type)!;
+  };
+
+  const selectedData = getSelectedData(type);
 
   return (
     <button 
-      className='bg-black rounded-lg p-4 flex items-center min-w-72'>
+      className={`bg-${background ?? 'black'} text-${color ?? 'white'} rounded-lg p-4 flex items-center min-w-72 hover:scale-110 duration-300`}>
       <Image 
-        src={image} 
+        src={selectedData.image} 
         width={platformSvcWidth}
         height={platformSvcHeight}
-        alt={altTitle ?? 'Platform Button'}
+        alt={selectedData.altTitle ?? 'Platform Button'}
       />
       <div 
         className="text-center w-full"
       >
-        {title}
+        {selectedData.title}
       </div>
     </button>
   )
