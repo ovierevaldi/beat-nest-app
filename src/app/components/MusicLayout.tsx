@@ -1,6 +1,6 @@
 
-import Image, { StaticImageData } from "next/image";
-import React, { useEffect, useState } from "react";
+import Image from "next/image";
+import React, { useState } from "react";
 import PlatformButton from "./PlatformButton";
 import { AnimatePresence, motion } from 'framer-motion';
 import { getUserArtwork, MusicData } from "@/data/userData";
@@ -57,6 +57,7 @@ const MusicLayout = ({ MusicLayoutParams } : { MusicLayoutParams: MusicLayoutPar
         <div className="flex gap-12">
           {primaryPlatforms.map((platform, index) => (
             <PlatformButton
+              url={platform.url}
               key={index}
               type={platform.type}
               background="black"
@@ -92,6 +93,7 @@ const MusicLayout = ({ MusicLayoutParams } : { MusicLayoutParams: MusicLayoutPar
             <div className="flex flex-col items-center gap-y-12 text-xl text-white">
               {secondaryPlatforms.map((platform, index) => (
                 <PlatformButton
+                  url={platform.url}
                   key={index}
                   type={platform.type}
                   background="white"

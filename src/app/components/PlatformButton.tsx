@@ -1,19 +1,15 @@
-import { PlatformDataList, PlatformType } from "@/data/musicData";
+import { PlatformData, PlatformDataList, PlatformType } from "@/data/musicData";
 import Image, { StaticImageData } from "next/image";
 
 type PlatformButtonProp = {
   type: PlatformType;
   background?: string;
   color?: string;
+  url: string;
 };
 
-type PlatformData = {
-  title: string
-  altTitle: string
-  image: StaticImageData
-}
 
-const PlatformButton = ({ type, background, color } : PlatformButtonProp) => {
+const PlatformButton = ({ type, background, color, url } : PlatformButtonProp) => {
   const platformSvcWidth = 55;
   const platformSvcHeight = 55;
 
@@ -25,8 +21,14 @@ const PlatformButton = ({ type, background, color } : PlatformButtonProp) => {
 
   return (
     <button 
-      className={`rounded-lg p-4 flex items-center min-w-72 hover:scale-110 duration-300`}
+      className={`rounded-lg p-4 flex items-center min-w-72 hover:scale-110 duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed`}
       style={{ color: color ?? 'white', backgroundColor : background ?? 'black'}}
+      disabled={!url}
+      onClick={() => {
+        if (url) {
+          window.open(url, '_blank');
+        }
+      }}
     >
       <Image 
         style={{ minHeight: platformSvcHeight, objectFit: 'contain'}}

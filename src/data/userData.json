@@ -33,16 +33,8 @@
     "artworkUrl": "2.png",
     "streamPlatforms": [
       {
-        "type": "JOOX",
-        "url": ""
-      },
-      {
-        "type": "Deezer",
-        "url": ""
-      },
-      {
-        "type": "Sound Cloud",
-        "url": ""
+        "type": "Spotify",
+        "url": "https://open.spotify.com/track/58dyqOFaPqpkS0rfSO0vnG?si=2535db0ddc4844c1"
       }
     ],
     "backgroundColor": "#f5dd42"
