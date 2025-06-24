@@ -44,11 +44,15 @@ export default function Home() {
         type: 'Sound Cloud',
         url: ''
       },
-    ]    
-  }
+    ],
+    backgroundColor: '#02464e'    
+  };
   
   return (
-    <div className='max-w-4xl bg-red-500 h-screen mx-auto flex flex-col justify-center items-center gap-y-12 relative'>
+    <div 
+      className={`max-w-4xl h-screen mx-auto flex flex-col justify-center items-center gap-y-12 relative`}
+      style={{ backgroundColor: testMusicData.backgroundColor ?? '#000'}}  
+    >
       <div>
         <Image
           className='hover:scale-110 duration-300'

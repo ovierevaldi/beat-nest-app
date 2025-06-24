@@ -16,7 +16,8 @@ export type MusicData = {
   title: string;
   artistName: string;
   artworkUrl: StaticImageData;
-  streamPlatforms: MusicPlatformProp[]
+  streamPlatforms: MusicPlatformProp[];
+  backgroundColor?: string;
 };
 
 
