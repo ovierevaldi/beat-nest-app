@@ -7,6 +7,7 @@ import PlatformButton from './components/PlatformButton';
 import CloseButton from './components/CloseButton';
 import { useState } from 'react';
 import { MusicData } from '@/musicData';
+import { AnimatePresence, motion } from 'framer-motion';
 
 export default function Home() {
   const artworkWidth = 270;
@@ -97,39 +98,30 @@ export default function Home() {
         </div>
       </div>
 
-      <div 
-        className={`bg-black/70 absolute w-full h-[90%] bottom-0 overflow-auto p-4 ${isMoreServiceExpanded ? '' : 'hidden'}`}
-      >
-        <div
-          className='text-right'
-        >
-          <CloseButton 
-            onClick={toggleMoreService}
-            size={50}
-          />
-        </div>
+      <AnimatePresence>
+        {isMoreServiceExpanded && (
+          <motion.div
+            initial={{ y: '100%' }}
+            animate={{ y: '0%' }}
+            exit={{ y: '100%' }}
+            transition={{ duration: 0.4, ease: 'easeInOut' }}
+            className="bg-black/70 absolute w-full h-[90%] bottom-0 overflow-auto p-4"
+          >
+            <div className='text-right'>
+              <CloseButton 
+                onClick={toggleMoreService}
+                size={50}
+              />
+            </div>
 
-        <div className='flex flex-col items-center gap-y-12 text-xl text-white'>
-            <PlatformButton 
-              type='Deezer'
-              background='white'
-              color='black'
-            />
-
-            <PlatformButton 
-              type='JOOX'
-              background='white'
-              color='black'
-            />
-
-            <PlatformButton 
-              type='Sound Cloud'
-              background='white'
-              color='black'
-            />
-            
-        </div>
-      </div>
+            <div className='flex flex-col items-center gap-y-12 text-xl text-white'>
+              <PlatformButton type='Deezer' background='white' color='black' />
+              <PlatformButton type='JOOX' background='white' color='black' />
+              <PlatformButton type='Sound Cloud' background='white' color='black' />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

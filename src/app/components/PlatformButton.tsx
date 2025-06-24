@@ -25,7 +25,9 @@ const PlatformButton = ({ type, background, color } : PlatformButtonProp) => {
 
   return (
     <button 
-      className={`bg-${background ?? 'black'} text-${color ?? 'white'} rounded-lg p-4 flex items-center min-w-72 hover:scale-110 duration-300`}>
+      className={`rounded-lg p-4 flex items-center min-w-72 hover:scale-110 duration-300`}
+      style={{ color: color ?? 'white', backgroundColor : background ?? 'black'}}
+    >
       <Image 
         src={selectedData.image} 
         width={platformSvcWidth}
