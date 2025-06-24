@@ -1,7 +1,7 @@
 'use client';
 
 import { useParams } from 'next/navigation';
-import getUserMusicDataById, { MusicData } from '@/data/userData';
+import getUserMusicDataById from '@/data/userData';
 import MusicLayout from '../components/MusicLayout';
 
 export default function Home() {

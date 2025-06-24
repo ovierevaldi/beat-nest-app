@@ -1,5 +1,5 @@
 import { PlatformData, PlatformDataList, PlatformType } from "@/data/musicData";
-import Image, { StaticImageData } from "next/image";
+import Image from "next/image";
 
 type PlatformButtonProp = {
   type: PlatformType;
