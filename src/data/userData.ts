@@ -3,6 +3,7 @@ import { MusicPlatformProp } from "./musicData";
 import userDataJSON from './userData.json';
 
 import a1 from '../../public/artworks/1.png';
+import a2 from '../../public/artworks/2.png';
 
 export type MusicData = {
   title: string;
@@ -13,6 +14,8 @@ export type MusicData = {
 };
 
 const artworkMap: Record<string, StaticImageData> = {
+  '1.png': a1,
+  '2.png': a2,
 };
 
 const userData = userDataJSON as MusicData[];

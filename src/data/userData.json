@@ -1,30 +1,50 @@
 [
   {
-  "artistName": "Ovie Revaldi",
-  "title": "Belajar Menyendiri",
-  "artworkUrl": "1.png",
-  "streamPlatforms": [
-    {
-      "type": "Youtube Music",
-      "url": ""
-    },
-    {
-      "type": "Spotify",
-      "url": ""
-    },
-    {
-      "type": "JOOX",
-      "url": ""
-    },
-    {
-      "type": "Deezer",
-      "url": ""
-    },
-    {
-      "type": "Sound Cloud",
-      "url": ""
-    }
-  ],
-  "backgroundColor": "#02464e"
-}
+    "artistName": "Ovie Revaldi",
+    "title": "Belajar Menyendiri",
+    "artworkUrl": "1.png",
+    "streamPlatforms": [
+      {
+        "type": "Youtube Music",
+        "url": ""
+      },
+      {
+        "type": "Spotify",
+        "url": ""
+      },
+      {
+        "type": "JOOX",
+        "url": ""
+      },
+      {
+        "type": "Deezer",
+        "url": ""
+      },
+      {
+        "type": "Sound Cloud",
+        "url": ""
+      }
+    ],
+    "backgroundColor": "#02464e"
+  },
+  {
+    "artistName": "Ovie Revaldi",
+    "title": "Selama Lamanya",
+    "artworkUrl": "2.png",
+    "streamPlatforms": [
+      {
+        "type": "JOOX",
+        "url": ""
+      },
+      {
+        "type": "Deezer",
+        "url": ""
+      },
+      {
+        "type": "Sound Cloud",
+        "url": ""
+      }
+    ],
+    "backgroundColor": "#f5dd42"
+  }
 ]
