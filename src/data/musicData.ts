@@ -1,25 +1,16 @@
 import { StaticImageData } from "next/image"
 
 // Import your platform logos
-import spotifyLogo from '../public/platforms/spotify.png';
-import ytMusicLogo from '../public/platforms/yt_music.png';
-import deezerLogo from '../public/platforms/deezer.png';
-import soundCloudLogo from '../public/platforms/SoundCloud-Logo.png';
-import jooxLogo from '../public/platforms/jooxLogo.png';
+import spotifyLogo from '../../public/platforms/spotify.png';
+import ytMusicLogo from '../../public/platforms/yt_music.png';
+import deezerLogo from '../../public/platforms/deezer.png';
+import soundCloudLogo from '../../public/platforms/SoundCloud-Logo.png';
+import jooxLogo from '../../public/platforms/jooxLogo.png';
 
 export type MusicPlatformProp = {
   type: PlatformType  
   url: string
 }
-
-export type MusicData = {
-  title: string;
-  artistName: string;
-  artworkUrl: StaticImageData;
-  streamPlatforms: MusicPlatformProp[];
-  backgroundColor?: string;
-};
-
 
 export type PlatformData = {
   type: PlatformType

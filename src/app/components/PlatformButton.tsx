@@ -1,4 +1,4 @@
-import { PlatformDataList, PlatformType } from "@/musicData";
+import { PlatformDataList, PlatformType } from "@/data/musicData";
 import Image, { StaticImageData } from "next/image";
 
 type PlatformButtonProp = {
@@ -29,6 +29,7 @@ const PlatformButton = ({ type, background, color } : PlatformButtonProp) => {
       style={{ color: color ?? 'white', backgroundColor : background ?? 'black'}}
     >
       <Image 
+        style={{ minHeight: platformSvcHeight, objectFit: 'contain'}}
         src={selectedData.image} 
         width={platformSvcWidth}
         height={platformSvcHeight}
